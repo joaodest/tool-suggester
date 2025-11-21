@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.12"]
+build-backend = "hatchling.build"
+
+[project]
+name = "suggester"
+version = "0.1.0"
+description = "Reactive tool calling/MCP suggestions for LLM UIs"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "João Dest", email = "joao@example.com" }]
+license = { text = "Apache-2.0" }
+keywords = ["LLM", "tools", "MCP", "autocomplete", "devex", "agent", "suggestions", "real-time"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/joaodest/tool-suggester"
+Repository = "https://github.com/joaodest/tool-suggester"
+Issues = "https://github.com/joaodest/tool-suggester/issues"
+Documentation = "https://github.com/joaodest/tool-suggester#readme"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7",
+  "ruff>=0.4",
+  "black>=24.3",
+  "mypy>=1.8",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
