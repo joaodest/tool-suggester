@@ -187,7 +187,7 @@ npm run dev
 
 ### Component Overview
 
-![Overview]<img width="3210" height="3625" alt="tool_architecture" src="https://github.com/user-attachments/assets/48140de5-3383-4456-bce7-f5e47da7e296" />
+<img width="3210" height="3625" alt="tool_architecture" src="https://github.com/user-attachments/assets/48140de5-3383-4456-bce7-f5e47da7e296" />
 
 ### Data Flow
 
