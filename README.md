@@ -187,47 +187,7 @@ npm run dev
 
 ### Component Overview
 
-```
-┌─────────────────────────────────────────────────┐
-│               User Interface                     │
-│     (React, Streamlit, CLI, OpenWebUI)          │
-└────────────────┬────────────────────────────────┘
-                 │
-        ┌────────▼────────┐
-        │   Adapters      │
-        │  (WebSocket,    │
-        │   Streamlit,    │
-        │   REST API)     │
-        └────────┬────────┘
-                 │
-        ┌────────▼────────────────────────────────┐
-        │      SuggestionEngine                   │
-        │  ┌──────────────────────────────────┐  │
-        │  │  Session Manager                 │  │
-        │  │  (per-user text buffers)         │  │
-        │  └──────────┬───────────────────────┘  │
-        │             │                           │
-        │  ┌──────────▼───────────┐              │
-        │  │   Tokenizer          │              │
-        │  │   (normalize, split) │              │
-        │  └──────────┬───────────┘              │
-        │             │                           │
-        │  ┌──────────▼───────────┐              │
-        │  │   TRIE Index         │              │
-        │  │   (prefix matching)  │              │
-        │  └──────────┬───────────┘              │
-        │             │                           │
-        │  ┌──────────▼───────────────────────┐  │
-        │  │   Inverted Index + Ranking       │  │
-        │  │   (TF-IDF, term frequency)       │  │
-        │  └──────────┬───────────────────────┘  │
-        │             │                           │
-        │  ┌──────────▼───────────┐              │
-        │  │   Top-K Selection    │              │
-        │  │   (scored results)   │              │
-        │  └──────────────────────┘              │
-        └─────────────────────────────────────────┘
-```
+![Overview]<img width="3210" height="3625" alt="tool_architecture" src="https://github.com/user-attachments/assets/48140de5-3383-4456-bce7-f5e47da7e296" />
 
 ### Data Flow
 
@@ -568,11 +528,6 @@ tool-suggester/
 │       │   ├── websocketService.ts
 │       │   └── suggestionService.ts
 │       └── README.md
-├── docs/
-│   ├── planning_tasks.md       # Comprehensive design doc
-│   ├── matching_v2_plan.md     # Inverted index optimization
-│   ├── multi_intent_plan.md    # Multi-intent detection design
-│   └── matching_free_text_plan.md  # Free-text matching design
 ├── start_demo.py               # One-command demo launcher
 ├── pyproject.toml              # Package configuration
 ├── CLAUDE.md                   # Claude Code integration guide
